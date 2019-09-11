@@ -1,0 +1,184 @@
+
+Interfaces
+
+
+[ 6.06 ] [ Today�s Date ] [ Instructor Name ]
+
+
+
+What are some limitations to inheritance?
+
+
+Can we inherit code from more than one superclass?
+
+
+Can we have an is
+-
+a relationship or polymorphism without giving the 
+subclass access to our code?
+
+
+
+Interfaces
+
+
+Offer a means to share a common 
+supertype
+without sharing the code.
+
+
+An interface consists of a set of method declarations without bodies.
+
+
+A promise of behavior; methods are declared but not defined.
+
+
+The method will be defined in the subclass.
+
+
+An error will be thrown if you don�t define the method.
+
+
+
+Interface in practice:
+
+
+Edible
+
+
+Greasy
+
+
+Aromatic
+
+
+Pork
+
+
+Bacon
+
+
+Lard
+
+
+Salty
+
+
+
+Declaring Interfaces
+
+
+public interface Salty{
+
+
+double 
+sodiumContent
+(); 
+.
+this is a promise to implement the 
+sodiumContent
+
+
+}
+in the class that implements the Salty interface.
+
+
+public interface Aromatic{
+
+
+String 
+describeAroma
+(); 
+.
+Notice the lack of �public�! Public is 
+assumed
+.
+
+
+}
+
+
+public interface Greasy{
+
+
+double 
+amountOfGreaseInMg
+(); 
+.
+point out that interfaces look just like classes
+
+
+}
+but without fields or method bodies
+
+
+public interface Edible{
+
+
+double calories();
+
+
+}
+
+
+
+Implementing Interfaces
+
+
+public class Bacon extends Pork implements Salty, Aromatic, Greasy, Edible {
+
+
+private double 
+amountInKg
+;
+
+
+public Bacon(double amount){
+
+
+amountInKg
+= amount;
+
+
+}
+
+
+public double calories(){
+
+
+return 
+amountInKg
+* CALORIES_PER_KG_OF_BACON;
+
+
+}
+
+
+}
+
+
+
+Class Activity
+
+
+[Paste example activity or your own from lesson plan to slide]
+
+
+
+Homework
+
+
+Read HW 9.6
+
+
+Summarize notes in notebook for tomorrow�s notebook check
+
+
+For extra credit:
+
+
+Generate your own class hierarchy that demonstrates the same 
+concepts illustrated by the Financial Class Hierarchy outlines in 
+the book. The extra credit project is due [in one week].
+
+

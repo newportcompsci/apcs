@@ -1,0 +1,139 @@
+
+Writing Recursive Solutions
+
+
+[ 8.02 ] [ Today�s Date ] [ Instructor Name ]
+
+
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/RecursiveTree.JPG/300px-RecursiveTree.JPG
+What makes a method recursive?
+
+
+How would we write a recursive method? 
+
+
+In pseudocode or code if possible!
+
+
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/RecursiveTree.JPG/300px-RecursiveTree.JPG
+What makes a method recursive?
+
+
+Base case:
+
+
+A case within a recursive solution that is 
+
+
+so simple, it can solved without needing 
+
+
+to call the method again.
+
+
+Recursive case:
+
+
+A case within a recursive solution that 
+
+
+involves reducing the overall problem to a
+
+
+simpler problem of the same kind that 
+
+
+can be solved with a recursive call.
+
+
+
+A recursive method:
+
+
+public static void 
+writeStars
+(
+int
+x) {
+
+
+if (x == 0) {
+
+
+System.out.println
+();
+
+
+} else {
+
+
+System.out.println
+(�*�);
+
+
+writeStars
+(x 
+�
+1);
+
+
+}
+
+
+}
+
+
+
+Wrong recursion:
+
+
+public static void 
+writeStars
+(
+int
+x) {
+
+
+System.out.print
+(�*�);
+
+
+writeStars
+(n 
+-
+1);
+
+
+}
+
+
+What is the output of this recursive call?
+
+
+
+Grudgeball
+
+
+
+Slides reserved for your own or
+chosen 
+Grudgeball
+questions.
+
+
+
+Homework
+
+
+Read the rest of HW 12.2
+
+
+Complete self
+-
+check questions %5, 7 
+�
+9 and exercise #1
+
+

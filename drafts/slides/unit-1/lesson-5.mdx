@@ -1,0 +1,294 @@
+import slideTheme from "../../components/slideTheme"
+export const theme = slideTheme
+
+# Static Methods and Method Calls
+
+---
+
+## Algorithms
+
+A list of steps for solving a problem.
+
+---
+
+## Example Algorithm: 
+
+```raw
+bakeSugarCookies ()
+  Mix the dry ingredients.
+  Cream the butter and sugar.
+  Beat in the eggs.
+  Stir in the dry ingredients.
+  Set the oven temperature.
+  Set the timer.
+  Place the cookies into the oven.
+  Allow the cookies to bake.
+  Spread the frosting and sprinkles onto the cookies. 
+  etc.
+```
+
+---
+
+## Problems with Algorithms
+
+Lack of structure:
+  Many tiny steps; tough to remember each step
+
+Redundancy:
+  Consider making a double batch
+
+```raw
+...
+Stir in the dry ingredients
+Set the oven temperature
+Set the timer
+Place the first batch of cookies into the oven
+Allow the cookies to bake
+Set the oven temperature
+Set the timer
+Place the second batch of cookies into the oven
+Allow the cookies to bake
+...
+```
+
+---
+
+## Did you spot the redundancy?
+
+---
+
+## Problems with Algorithms
+
+Lack of structure:
+  Many tiny steps; tough to remember each step
+
+Redundancy:
+  Consider making a double batch
+
+```raw
+...
+Stir in the dry ingredients
+Set the oven temperature
+Set the timer
+Place the first batch of cookies into the oven
+Allow the cookies to bake
+Set the oven temperature <- Why would you set the oven twice??
+Set the timer
+Place the second batch of cookies into the oven
+Allow the cookies to bake
+...
+```
+
+---
+
+## Removing Redundancy
+
+A well-structured algorithm can describe repeated tasks with less redundancy
+
+```raw
+makeCookieBatter()
+  Mix in the dry ingredients.
+  Mix wet ingredients.
+
+bakeCookies()
+  Put Cookies in Oven
+  Set the Timer
+```
+
+---
+
+## Removing Redundancy
+
+By grouping steps and calling the groups, we can eliminate redundancy.
+
+```raw 
+makeCookieBatter()
+Set oven temperature
+bakeCookies()
+bakeCookies()
+Decorate Cookies
+```
+
+---
+
+## Structure Diagram
+
+Allows you to divide and conquer
+
+<!---
+Many batches of cookies
+Make a batch of cookies
+Make the batter
+Bake the cookies
+Decorate the cookies
+-->
+
+---
+
+## Create a structure diagram for this set of stacked boxes:
+
+```raw
++-------+
+|       |
+|       |
++-------+
+
++-------+
+|       |
+|       |
++-------+
+
++-------+
+|       |
+|       |
++-------+
+```
+
+---
+
+### Static Methods
+
+- A named group of statements
+
+
+### Procedural decomposition: 
+- dividing a problem into methods
+
+> Writing a static method is like adding a new command to Java
+
+---
+
+## Using Static Methods
+
+- Define / Declare the method
+- Call (or run) the method
+
+*Insider Tip* The main method always runs first
+
+---
+
+## Defining and Declaring a Method
+
+Giving your method a name so it can be executed
+
+Syntax:
+```raw
+public static void name (){
+  statement;
+  statement;
+  statement;
+}
+```
+
+---
+
+## Example:
+```java
+public static void makeBatter (){
+  System.out.println("Mix the dry ingredients.");
+  System.out.println("Cream the butter/sugar.");
+  System.out.println("Beat in the eggs.");
+  System.out.println("Stir in dry ingredients.");
+}
+```
+
+---
+
+## Calling Static Methods
+
+Executes the method's code
+
+Syntax: 
+```raw
+<name>()
+```
+
+---
+
+## Example: 
+```java
+makeBatter()
+```
+
+Output:
+```raw
+Mix the dry ingredients. 
+Cream the butter/sugar
+Beat in the eggs
+Stir in dry ingredients
+```
+
+---
+
+```java
+// This program displays a delicious recipe for baking cookies.
+public static void main(String[] args) {
+  // Step 1: Make the cake batter.
+  System.out.println("Mix the dry ingredients.");
+  System.out.println("Cream the butter and sugar.");
+  System.out.println("Beat in the eggs.");
+  System.out.println("Stir in the dry ingredients.");
+
+  // Step 2a: Bake cookies (first batch).
+  System.out.println("Set the oven temperature.");
+  System.out.println("Set the timer."); 
+  System.out.println("Place a batch of cookies into the oven.");
+  System.out.println("Allow the cookies to bake.");
+
+  // Step 2b: Bake cookies (second batch).
+  System.out.println("Set the oven temperature.");
+  System.out.println("Set the timer.");
+  System.out.println("Place a batch of cookies into the oven.");
+  System.out.println("Allow the cookies to bake.");
+
+  // Step 3: Decorate the cookies.
+  System.out.println("Mix ingredients for frosting.");
+  System.out.println("Spread frosting and sprinkles.");
+}
+```
+
+---
+
+```java
+// This program displays a delicious recipe for baking cookies.
+public class BakeCookies3 {
+  public static void main(String[] args) {
+    makeBatter();
+    System.out.println("Set the oven temperature.");
+    bake(); // 1st batch
+    bake(); // 2nd batch
+    decorate();
+  }
+  // Step 1: Make the cake batter.
+  public static void makeBatter() {
+    System.out.println("Mix the dry ingredients.");
+    System.out.println("Cream the butter and sugar.");
+    System.out.println("Beat in the eggs.");
+    System.out.println("Stir in the dry ingredients.");
+  }
+  // Step 2: Bake a batch of cookies.
+  public static void bake() {
+    System.out.println("Set the timer.");
+    System.out.println("Place batch into oven.");
+    System.out.println("Allow the cookies to bake.");
+  }
+  // Step 3: Decorate the cookies.
+  public static void decorate() {
+    System.out.println("Mix ingredients for frosting.");
+    System.out.println("Spread frosting and sprinkles.");
+  }
+}
+```
+
+> This affords you a lot of new capabilities.
+
+---
+
+## Practice - It
+
+Complete the following practice-it questions:
+
+- Tricky
+- Strange
+- Confusing
+- Lots-of-Errors

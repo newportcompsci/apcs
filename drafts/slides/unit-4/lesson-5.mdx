@@ -1,0 +1,425 @@
+
+Shifting Values & Arrays of Objects
+
+
+[ 4.05 ] [ Today’s Date ] [ Instructor Name ]
+
+
+
+metroCardRides
+
+
+int
+[] 
+metroCardRides
+= {5, 4, 3, 2, 1};
+
+
+How would you reorganize this array (within your code) so that the 5 
+moves from the first element to the last element? 
+
+
+*You cannot reinitialize the array.
+
+
+
+Store the first value in the array.
+
+
+int
+first = 
+metroCardRides
+[0];
+
+
+How do we assign each value in the array to the next value in the array?
+
+
+Hint: Try using a for loop to cycle through!
+
+
+
+Cycle through the array:
+
+
+for (
+int
+j = 0; j < 
+metroCardRides.length
+–
+1; 
+j++
+){
+
+
+metroCardRides
+[j] = 
+metroCardRides
+[j + 1];
+
+
+}
+
+
+What additional code do we need to add to finish our array?
+
+
+Hint: Our array is currently: 
+
+
+4
+
+
+3
+
+
+2
+
+
+1
+
+
+1
+
+
+
+
+
+Good job:
+
+
+public static void 
+firstToLast
+(
+int
+[] 
+metroCardRides
+) {
+
+
+int
+first = 
+metroCardRides
+[0];
+
+
+for (
+int
+j = 0; j < 
+metroCardRides.length
+–
+1; 
+j++
+) {
+
+
+metroCardRides
+[j] = 
+metroCardRides
+[j + 1];
+
+
+}
+
+
+metroCardRides
+[
+metroCardRides.length
+–
+1] = first;
+
+
+}
+
+
+How can we do the opposite? Move the last element to the front?
+
+
+
+The opposite:
+
+
+public static void 
+firstToLastRight
+(
+int
+[] 
+metroCardRides
+){
+
+
+int
+last = 
+metroCardRides
+[
+metroCardRides.length
+–
+1];
+
+
+for (
+int
+j = 
+metroCardRides.length
+–
+1; j >= 1; 
+j++
+){
+
+
+metroCardRides
+[j] = 
+metroCardRides
+[j 
+–
+1];
+
+
+}
+
+
+metroCardRides
+[0] = last;
+
+
+}
+
+
+
+Practice It
+
+
+
+Homework
+
+
+Read HW 7.4 “Nested Arrays” and HW 7.5 “Rectangle Two
+-
+Dimensional 
+Arrays
+
+
+Complete chapter 7 self
+-
+check questions #27 
+–
+29 and exercise #4.
+
+
+
+Nested Loop Algorithms & 
+Rectangular Arrays
+
+
+[ 4.06 
+] [ Today’s Date ] [ Instructor Name ]
+
+
+
+Two
+-
+dimensional arrays:
+
+
+turkey
+
+
+ham
+
+
+roast beef
+
+
+turkey
+
+
+
+
+turkey
+
+
+ham
+
+
+roast beef
+
+
+turkey
+
+
+ham
+
+
+turkey
+
+
+roast beef
+
+
+chicken
+
+
+roast beef
+
+
+roast beef
+
+
+turkey
+
+
+roast beef
+
+
+
+
+
+Write a loop that outputs all inversions:
+
+
+4
+
+
+3
+
+
+2
+
+
+1
+
+
+
+
+E.g. (4, 3), (4, 2), (4, 1), (3, 2) …
+
+
+
+Final code:
+
+
+for(
+int
+i
+= 0; 
+i
+< 
+data.length
+-
+1; 
+i
+++) {
+
+
+for(
+int
+j = 
+i
++ 1; j < 
+data.length
+; 
+j++
+){
+
+
+if (data [
+i
+] > data[j]) {
+
+
+System.out.println
+(“(“ + data[
+i
+] +”, “ + data[j] + “)”);
+
+
+}
+
+
+}
+
+
+}
+
+
+
+Array data representation:
+
+
+•
+double
+•
+double[]
+•
+double[][]
+•
+double[][][]
+
+
+
+Constructing a double array:
+
+
+
+Passing double arrays as parameters:
+
+
+public static void print(double[][] grid) {
+
+
+for(
+int
+i
+= 0; 
+i
+< 
+grid.length
+; 
+i
+++) {
+
+
+for(
+int
+j = 0; j < grid[
+i
+].length; 
+j++
+) {
+
+
+System.out.print
+(grid[
+i
+][j] + “ “);
+
+
+}
+
+
+System.out.println
+();
+
+
+}
+
+
+}
+
+
+
+Homework
+
+
+Read HW 10.1 up to “Adding to and Removing from an 
+ArrayList
+.”
+
+
+Complete chapter 10 self
+-
+check problems #1 
+–
+6. 
+
+

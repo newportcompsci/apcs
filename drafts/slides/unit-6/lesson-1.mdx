@@ -1,0 +1,161 @@
+
+Inheritance Basics
+
+
+[ 6.01 ] [ Today�s Date ] [ Instructor Name ]
+
+
+
+http://i.kinja-img.com/gawker-media/image/upload/s--_PgZVCSE--/193m8hvco32j0jpg.jpg
+
+What do all Pok�mon have in common?
+
+
+
+We need to create a superclass:
+
+
+Every 
+Pokemon
+is an instance.
+
+
+Vocabulary:
+
+
+�
+Inheritance Hierarchy
+�
+Inheritance
+�
+Superclass
+�
+Subclass, or Child Class
+
+
+
+What fields would a specialized subclass have that 
+a superclass wouldn�t?
+
+
+
+Clipart cartoon of bubbly <strong>soda</strong> from Clipart: � 2015 Vital Imagery Ltd ...
+
+SugarFreeDrink
+class:
+
+
+public class 
+SugarFreeDrink
+extends Drink {
+
+
+private 
+boolean
+hasSweetener
+;
+
+
+private double 
+caffeineContent
+;
+
+
+
+SugarFreeDrink
+class:
+
+
+public 
+SugarFreeDrink
+(String 
+name
+, Boolean 
+hasCarbonation
+,
+boolean
+h, double c) {
+
+
+super
+(name, 
+hasCarbonation
+, 0.0); 
+//Superclass�
+
+
+hasSweetener
+= h;
+
+
+caffieneContent
+= c;
+
+
+}
+
+
+
+SugarFreeDrink
+methods:
+
+
+public void 
+printWarningLabel
+() {
+
+
+if(
+hasSweetener
+) {
+
+
+System.out.println
+(�This drink is not safe for
+
+
++ 
+Phenylketonurics
+.�);
+
+
+} else {
+
+
+System.out.println
+(�This drink contains no
+
+
++ artificial sweeteners.�);
+
+
+}
+
+
+}
+
+
+
+Worksheet 6.1: Posters
+
+
+
+Quiz 
+6.1
+
+
+
+Homework
+
+
+Read HW 9.2 up to �
+DividendStock
+Behavior� 
+
+
+Collect images that represent instances of the classes created for in
+-
+class poster project.
+
+
+

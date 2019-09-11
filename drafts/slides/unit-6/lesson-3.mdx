@@ -1,0 +1,157 @@
+Interacting with the 
+Object Superclass
+
+
+[ 6.03 ] [ Today�s Date ] [ Instructor Name ]
+
+
+
+The 
+Object
+Superclass
+
+
+All classes are subclasses of the 
+Object
+class.
+
+
+This means all objects inherit some methods:
+
+
+toString
+() 
+//only ones on AP
+
+
+equals()
+
+
+
+Who remembers what 
+toString
+does?
+
+
+
+Why can�t we just use 
+==
+to test for equality?
+
+
+
+The standard == operator:
+
+
+String z = �z�;
+a == b
+
+
+Evaluates to false because 
+a
+and 
+b
+
+
+String a = z + z;
+refer to different strings.
+
+
+String b = �
+zz
+�;
+c == b
+
+
+Evaluates to true because 
+c
+and 
+b
+
+
+String c = b;
+refer to the same string.
+
+
+
+The String 
+equals
+methods
+
+
+a.equals
+(b) 
+
+
+/* evaluates to true because the content of a and b are the same */
+
+
+c.equals
+(b) 
+
+
+/* evaluates to true because c and b refer to the same string */
+
+
+
+Overriding the 
+equals
+method:
+
+
+public 
+boolean
+equals(Object o){
+
+
+Drink other = (Drink) o;
+
+
+return 
+name.equal
+(other.name) && ounces == 
+other.ounces
+;
+
+
+}
+
+
+What does this let us compare?
+
+
+What are some examples of where this can be useful?
+
+
+
+Practice
+-
+It
+
+
+subclassSyntax
+
+
+inheritanceVariableSyntax
+
+
+CarTruck
+
+
+CarTruck2
+
+
+MonsterTruck
+
+
+
+Worksheet
+
+
+
+Homework
+
+
+Read HW 9.3 up to �Interpreting Inheritance Code�
+
+

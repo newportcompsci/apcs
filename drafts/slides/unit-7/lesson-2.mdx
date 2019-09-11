@@ -1,0 +1,622 @@
+
+Sorting Algorithm
+
+
+[ 7.02 ] [ Today�s Date ] [ Instructor Name ]
+
+
+
+Sorting
+
+
+Which searching method was faster? (what are those methods)
+
+
+What was a prerequisite for that search?
+
+
+What are examples where it might be important to store data?
+
+
+
+As you arrive�
+
+
+Think of 3 examples where your phone, tablet, or computer 
+needs to sort things in order.
+
+
+
+Sorting algorithms
+
+
+�
+There are many sorting algorithms.
+�
+Some take more time.
+�
+Some use more memory.
+�
+Some are simple and some are complex.
+�
+Initially, we�ll learn about 2 simple ones:
+
+
+-
+selection sort
+
+
+-
+insertion sort
+
+
+comments for � Make Your Own <strong>Sorting</strong> Hat Decoration �
+
+Selection Sort
+
+
+Think of the array as having two parts:
+
+
+Sorted part at the left
+
+
+Unsorted part at the right
+
+
+Repeatedly put the smallest unsorted value into its final position (at the 
+end of the sorted section)
+
+
+
+Selection Sort
+
+
+The algorithm:
+
+
+Look through the list and find the smallest value.
+
+
+Swap it so that it�s at index 0.
+
+
+Look through the list and find the second smallest value.
+
+
+Swap it so that it is at index 1.
+
+
+�
+
+
+Repeat until all values are in their proper places.
+
+
+
+Selection Sort
+
+
+public
+static
+void
+selectionSort
+(
+int
+[] a) 
+
+
+{
+
+
+for
+(
+int
+i = 0; i < a.
+length
+-
+1; i++) 
+{
+
+
+// find index of smallest remaining value
+
+
+int
+min = 
+i
+;
+
+
+for
+(
+int
+j = 
+i
++ 1; j < 
+a.
+length
+; 
+j++
+) 
+{
+
+
+if
+(a[j] < a[min]) 
+
+
+min = j;
+
+
+}
+
+
+// swap smallest value into its proper place, a[
+i
+]
+
+
+int
+temp = a[
+i
+];
+
+
+a[
+i
+] = a[min];
+
+
+a[min] = temp;
+
+
+}
+
+
+}
+
+
+Image result for selection sort
+
+Insertion Sort
+
+
+For insertion sort, we used arrays.
+
+
+Arrays don�t let you insert 
+in the middle
+.
+
+
+So how did we insert the next unsorted element where it belongs?
+
+
+We slide it into place!
+
+
+
+Insertion Sort: Array
+
+
+public
+static
+void
+insertionSort
+(
+int
+[] a) 
+{
+
+
+for
+(
+int
+i 
+= 1
+; 
+i
+< 
+a
+.
+length
+; 
+i
+++) 
+{
+
+
+for
+(
+int
+j
+= 
+i
+; 
+j
+> 0 && 
+a
+[
+j
+] < 
+a
+[
+j
+-
+1]; 
+j
+--
+) {
+
+
+int
+temp = 
+a
+[
+j
+];
+
+
+a
+[
+j
+] = 
+a
+[
+j
+-
+1];
+
+
+a
+[
+j
+-
+1] = temp;
+
+
+}
+
+
+}
+
+
+}
+
+
+
+Insertion Sort: 
+ArrayList
+
+
+public
+static
+void
+insertionSort
+(
+ArrayList
+<Integer> 
+a
+)
+{
+
+
+for
+(
+int
+i
+= 1; 
+i
+< 
+a
+.size
+(); 
+i
+++)
+{
+
+
+for
+(
+int
+j
+= 
+i
+; 
+j
+> 0 && 
+a
+.get
+(
+j
+) < 
+a
+.get
+(
+j
+-
+1); 
+j
+--
+)
+{
+
+
+int
+temp
+= 
+a
+.get
+(
+j
+);
+
+
+a
+.set
+(
+j
+, 
+a
+.get
+(
+j
+-
+1));
+
+
+a
+.set
+(
+j
+-
+1, 
+temp
+);
+
+
+}
+
+
+}
+
+
+}
+
+
+1.
+Remove 
+i
+th
+element
+2.
+Find where it belongs
+3.
+Insert it into place
+
+
+
+Insertion Sort: 
+ArrayList
+
+
+public
+static
+void
+insertionSort
+(
+ArrayList
+<Integer> 
+a
+)
+{
+
+
+for
+(
+int
+i
+= 1; 
+i
+< 
+a
+.size
+(); 
+i
+++)
+{
+
+
+1. How do we remove the 
+i
+th
+element?
+
+
+}
+
+
+}
+
+
+
+Insertion Sort: 
+ArrayList
+
+
+public
+static
+void
+insertionSort
+(
+ArrayList
+<Integer> 
+a
+)
+{
+
+
+for
+(
+int
+i
+= 1; 
+i
+< 
+a
+.size
+(); 
+i
+++)
+{
+
+
+int
+value = 
+a.remove
+(
+i
+);
+
+
+2. Where does the value belong?
+
+
+3. How do we insert the value at that place?
+
+
+}
+
+
+}
+
+
+
+Insertion Sort: 
+ArrayList
+
+
+public
+static
+void
+insertionSort
+(
+ArrayList
+<Integer> 
+a
+) 
+{
+
+
+for
+(
+int
+i
+= 1; 
+i
+< 
+a
+.size(); 
+i
+++) 
+{
+
+
+int
+value
+= 
+a
+.remove
+(
+i
+);
+
+
+int
+j
+= 
+i
+;
+
+
+while
+(
+j
+> 0 && 
+value
+< 
+a
+.get
+(
+j
+-
+1)) 
+{
+
+
+j
+--
+;
+
+
+}
+
+
+a
+.add
+(
+j
+, 
+value
+);
+
+
+}
+
+
+}
+
+
+
+Comparison: 
+ArrayList
+vs Array Insertion Sort
+
+
+Our 
+ArrayList
+implementation is�
+
+
+More intuitive (no sliding necessary)
+
+
+More like how we�d sort a hand of cards IRL
+
+
+Maybe easier to read
+
+
+Is it faster?
+
+
+�
+The 
+ArrayList
+still has to do the same number of exchanges
+�
+The code is merely hidden from us, but it�s still there
+�
+So no, not faster
+
+
+
+
+
+Homework
+
+
+Read HW 13.1 �Shuffling�
+
+

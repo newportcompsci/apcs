@@ -1,0 +1,114 @@
+import slideTheme from "../../components/slideTheme"
+export const theme = slideTheme
+
+# Static Methods and Method Calls
+
+---
+
+## Mystery
+
+How do you think this program runs?
+
+What is the output of this program?
+
+```java
+public class MethodsExample {
+  public static void main(String[] args) {
+    message1();
+    message2();
+    System.out.println("Done with main.");
+  }
+
+  public static void message1() { 
+    System.out.println("This is message1.");
+  }
+
+  public static void message2() { 
+    System.out.println("This is message2.");
+    message1(); // We can put methods inside methods!
+    System.out.println("Done with message2.");
+  }
+}
+```
+
+---
+
+## In this case, the program outputs:
+
+```raw
+This is message1.
+This is message2.
+This is message1.
+Done with message2.
+Done with main.
+```
+
+---
+
+## Control Flow
+
+What do you think the output of this program is?
+
+---
+
+## Review Exercises
+
+Write a program that prints your name in the following forms:
+
+- FirstName LastName
+- FirstName MiddleName LastName
+- LastName, FirstName
+- LastName, FirstName MiddleName
+
+> Rewrite the above program using static void methods
+
+---
+
+## Challenge
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridColumnGap: '1em'}}>
+
+<div style={{ textAlign: 'left' }}>
+There's a 10 minute time limit.
+Write a Java program called `StarFigures` that generates the following output
+
+You *MUST* include a structure diagram or your answer will be disqualified
+
+A correct answer will use static methods to show structure and eliminate redundancy in your solution
+</div>
+
+```raw
+*****
+*****
+ * *
+  *
+ * *
+*****
+*****
+ * *
+  *
+ * *
+*****
+*****
+  *
+  *
+  *
+*****
+*****
+ * *
+  *
+ * *
+```
+
+</div>
+
+
+---
+
+## Practice It
+
+If you speed through and finish early, here are some problems for you to try:
+
+Complete Strange 2, Strange 3, Complicated 2 and Complicated 3 Practice-It
+
+Work on sample test questions with outputs that can be written using method calls. Make sure to include an answer key to your sample!
