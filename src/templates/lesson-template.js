@@ -85,9 +85,6 @@ export default LessonTemplate
 
 export const query = graphql`
   query LessonByPath($path: String!) {
-    site {
-      pathPrefix
-    }
     mdx(frontmatter: { path: { eq: $path } }) {
       body
       frontmatter {
