@@ -27,12 +27,7 @@ const LessonTemplate = ({ data }) => {
 
   let slidesComponent = post.frontmatter.slides ? (
     <Card>
-      <BaseLink
-        forceExternal
-        to={`/slides${post.frontmatter.path}`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <BaseLink to={`/slides${post.frontmatter.path}`}>
         <Flex>
           <MdSlideshow />
           Slide Deck
@@ -90,6 +85,9 @@ export default LessonTemplate
 
 export const query = graphql`
   query LessonByPath($path: String!) {
+    site {
+      pathPrefix
+    }
     mdx(frontmatter: { path: { eq: $path } }) {
       body
       frontmatter {
