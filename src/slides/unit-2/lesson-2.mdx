@@ -1,0 +1,276 @@
+import slideTheme from "../../components/slideTheme"
+export const theme = slideTheme
+
+# Declaring and Assigning Variables
+
+---
+
+## Discuss
+
+> Turn and talk with your partner what sort's of conversions you need to 
+> calculate throughout the day. How do you go about calculating those conversions? 
+
+---
+
+## Variables
+
+- A piece of the computer's memory that is given a name and type 
+- Can store a value
+
+> Example: preset station on a car stereo or cell phone speed dial
+
+---
+
+## Step 1: Declare the variable
+
+Sets aside memory for storing a value
+
+Variables must be declared before the variable can be used
+
+Syntax:
+
+```raw
+<type> <variable name>;
+```
+
+---
+
+## String is the type we have learned so far
+
+`name` is an identifier
+
+Naming convention is camel casing: lower case first letter
+
+Example: 
+```java
+String myStringVar;
+int myCounter;
+```
+
+---
+
+## Exercise 1:
+
+```raw
+int age;
+int ageeeeeeee;
+int age 
+int thisIsAReallyLongVariableName;
+int my age;
+int my.age;
+int "age";
+int my;age;
+int my;age;
+int; hello;
+int hello;
+```
+
+---
+
+## Exercise 2
+
+> Write down the code that tells Java to declare an int variable with the name of `color`
+
+---
+
+## Step 2: Assign the variable
+
+Stores a value to the space reserved for the variable
+
+Syntax:
+
+```raw
+<variable name> = <expression>;
+```
+
+> the value stored can be updated as many times as needed 
+
+---
+
+## Variable Assignment 
+
+```java 
+myCounter = 0;
+
+// We'll learn a better way to do this later
+myCounter = (myCounter + 1); 
+```
+
+---
+
+## Exercise 3: 
+
+```raw 
+age = 17;
+age == 17;
+age = "seventeen";
+age = 17
+age = (age + 1);
+Age = 17;
+age = (Age + 1);
+17 = age;
+age 17
+age = 20,000;
+age = 17.000;
+age = $17
+age = ;
+age is 17;
+```
+
+---
+
+## Assignment and Declaring
+
+a value can be assigned the same time it is declared:
+
+```raw
+<type> <variable name> = <expression>;
+```
+
+Example:
+
+```java
+int age = 17; 
+
+// is the same as 
+ int age;
+ age = 17;
+```
+
+---
+
+## Exercise 4:
+
+```raw
+int age is 17;
+int; hello = 5;
+int "age" = "17";
+int money = $3,000;
+int; hello = 5;
+int hello = 5;
+int ageeeeeeee = 17eeeeeeeee;
+int h = 0;
+int t =;
+```
+
+---
+
+## Step 3: Using the variable
+
+The variable's name can be used wherever you need to use that value
+
+Syntax:
+```java
+String value = "Hello";
+System.out.println(value);
+String valueWithNewline = value + "\n";
+```
+
+---
+
+## The variable can be used as many times as needed
+
+changing the variable's value will be reflected in the code that used the variable 
+later in the execution
+
+
+Example:
+
+```java
+String myStringVar = "Hello there";
+System.out.println(myStringVar);
+myStringVar = "Goodbye";
+System.out.println(myStringVar);
+```
+
+Output:
+
+```raw
+hello there
+Goodbye
+```
+
+---
+
+## Exercise 5a
+
+```java 
+int variableOne = 1;
+int variableTwo = 4;
+int variableThree  = variableOne + variableTwo;
+variableOne = variableTwo
+```
+
+> What are the values in all of the variables here?
+
+---
+
+## Exercise 5b
+
+```java
+int candies = 70;
+int studentsInClass = 15;
+int candiesPerStudent = candies / studentsInClass;
+int candiesLeftOver = candies % studentsInClass;
+```
+
+---
+
+## Exercise 5c
+
+```java
+int a = 10;
+int b = 100;
+int c = 1000;
+int d = a + b + c;
+int e = d - a;
+int f = 10 * e;
+```
+
+---
+
+## Exercise 6 
+
+```raw 
+String greeting = "Hello, world.";
+String greeting = "Hello, world;".
+String greeting is "Hello, world.";
+String greeting = "Hello, woooooooorld.";
+String "greeting" = "Hello, world.";
+String "hello, world." = greeting;
+String myString = "My age is (17 + 1)";
+String myString = "My age is " + (17 + 1);
+String what'sUp = "How are you?";
+String hello = "how are you?"
+String goodbye = 'See you later';
+Striiiiiiiing greeting = "Hello, world.";
+String greetiiiiiiiiing = "Hello, world.";
+```
+
+---
+
+## Common Complier Errors
+
+- A variable cannot be used until it is assigned
+- Variable names cannot be declared twice
+- If the variable name is mistyped, the compiler will say the variable is undeclared
+
+---
+
+## Lab 
+
+> You and your partner are going to pair program a Fahrenheit / Celcius converter using 
+> what we have learned to day. 
+
+---
+
+## Practice-It
+
+Complete the following self-check questions:
+
+a. studentVariables
+b. Values of A, B, C
+
+
+Complete the Practice-It exercise displacement.
+
