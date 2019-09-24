@@ -1,0 +1,415 @@
+import { Appear } from "gatsby-theme-mdx-deck"
+import slideTheme from "../../components/slideTheme"
+export const theme = slideTheme
+
+# String Concatenation and Increment
+
+---
+
+## Intro to String Concatenation : Expressions with Strings
+
+```java
+"hello" + 4 = "hello4"
+
+"hello" + 4 + 2 = "hello42"
+
+4 + 2 + "hello" = "6hello"
+
+"hello" + (4 + 2) = "hello6"
+
+"hello" + 4 * 2 = "hello8"
+```
+
+---
+
+## More Examples:
+
+```java
+1 + 2 + 3 + "chocolate" = ??? 
+
+"chocolate"+ 1 + 2 + 3 = ???
+
+"chocolate"+ (1 + 2) + 3 = ???
+
+"chocolate"+ (1 + 2) / 3 = ???
+```
+
+---
+
+Examples
+
+```java
+System.out.println("Spongebob thinks " 
+    + "the best time to wear a sweater" 
+    + " is all the time!");
+
+System.out.println("Here we combine " + 1 + " integer" + " with strings!");
+
+System.out.println(42 + " is the answer to" + "everything!" + 1 + 1)
+```
+
+---
+
+## Introduction to Increment
+
+
+> In Java, there are ways to increase/decrease a variable without writing 
+> the whole equation!
+
+```java
+x += 7; // The same as -> x = x + 7; 
+
+y /= 3; // The same as -> y = y / 3 ; 
+
+// Both are the same as x = x + 1
+x++; // use then change
+++x; // change then use
+```
+
+---
+
+# GrudgeBall
+
+---
+
+## Rules 
+
+- Get into 6 groups
+- Each group starts with 10 points
+- Each group will take turns answering questions
+- If your group gets their question correct they can:
+  - Take 2 points from any team OR
+  - Take a shot from the 2-point line or 3-point line
+    - 2-point line: Take 3 points 
+    - 3-point line: Take 5 points
+- You may distribute your points between multiple teams
+
+---
+
+## Question 1: 
+
+### What does this expression evaluate to?
+
+<Appear>
+
+```java
+"Patrick" + " why" + "are you" + "here?"
+```
+
+```raw
+Patrick whyare youhere?
+```
+
+</Appear>
+
+---
+
+## Question 2:
+
+### What does this expression evaluate to?
+
+<Appear>
+
+```java
+2 + "words: " + "Na. Chos."
+```
+
+```raw
+2words: Na. Chos.
+```
+
+</Appear>
+
+---
+
+## Question 3:
+
+### What does this expression evaluate to?
+
+<Appear>
+
+```java
+"Friendship " + 1 + "$" + " magic!"
+```
+
+```raw
+Friendship 1$ magic!
+```
+
+</Appear>
+
+---
+
+## Question 4:
+
+### What does this expression evaluate to?
+
+<Appear>
+
+```java
+"Watch out" + " for " + "\"\"" + "" + "escape sequences!"
+```
+
+```raw
+Watch out for ""escape sequences!
+```
+
+</Appear>
+
+---
+
+## Question 5:
+
+### What does this expression evaluate to?
+
+<Appear>
+
+```java
+"Pikachu, pika pika" + "peeeeeeeeka" + " ch" + 0 + 0 +"!"
+```
+
+```raw
+Pikachu, pika pikapeeeeka ch00!
+```
+
+</Appear>
+
+---
+
+## Question 6:
+
+### What does this expression evaluate to?
+
+<Appear>
+
+```java
+"PEMDAS" + "doesn't " + (2 + 3) * 4 + "matter " + "right?" + 1
+```
+
+```raw
+PEMDASdoesn’t 20matter right?1
+```
+
+</Appear>
+
+---
+
+## Question 7:
+
+### Write two statements that:
+
+<Appear>
+
+> Increases the current value of x by 150.
+
+```java
+x = x + 150;
+x += 150;
+```
+
+</Appear>
+
+---
+
+## Question 8:
+
+### Write two statements that:
+
+<Appear>
+
+> Decreases the current value of y by 9.
+
+```java
+y = y - 9;
+y -= 9;
+```
+
+</Appear>
+
+---
+
+## Question 9:
+
+### Write two statements that:
+
+<Appear>
+
+> Multiplies the current value of z by 5.
+
+```java
+z = z * 5;
+z *= 5;
+```
+
+</Appear>
+
+---
+
+## Question 10:
+
+### Write two statement that:
+
+<Appear>
+
+> Divides the current value of q by 14. 
+
+```java
+q = q / 14;
+q /= 14;
+```
+
+</Appear>
+
+---
+
+## Question 11:
+
+### Write two statements that:
+
+<Appear>
+
+> Increments x by 1. 
+
+```java
+// Any two of the following
+x++; 
+++x;
+x = x + 1;
+x += 1;
+```
+
+</Appear>
+
+---
+
+## Question 12:
+
+### Write two statements that:
+
+<Appear>
+
+> Decrements x by 1.
+
+```java
+// Any two of the following
+x--;
+--x;
+x = x - 1;
+x -= 1;
+```
+
+</Appear>
+
+---
+
+## Question 13:
+
+### Predict the output
+
+<Appear>
+
+```java
+int x = 1;
+x += 3; 
+System.out.println("The value of x is " + x);
+```
+
+```raw
+The value of x is 4
+```
+
+</Appear>
+
+---
+
+## Question 14:
+
+### Predict the output
+
+<Appear>
+
+```java
+System.out.println(1 + 1 + 1 + "1" + 1 + 1 + 1);
+```
+
+```raw
+31111
+```
+
+</Appear>
+
+---
+
+## Question 15:
+
+### Predict the output
+
+<Appear>
+
+```java
+int y = 2;
+y /= 2;
+System.out.println("1 + " + y + "is how much again?");
+```
+
+```raw
+1 + 1is how much again?
+```
+
+</Appear>
+
+---
+
+## Question 16:
+
+### Predict the output
+
+<Appear>
+
+```java
+System.out.println(110 – 10 + "flip it " + 0 + 0 + 1);
+```
+
+```raw
+100flip it 001
+```
+
+</Appear>
+
+---
+
+## Question 17:
+
+### Predict the output
+
+<Appear>
+
+```java
+System.out.println("100 – 10" + "flip it " + 0 + "0 + 1");
+```
+
+```raw
+100 – 10flip it 00 + 1
+```
+
+</Appear>
+
+---
+
+## Question 18:
+
+### Predict the output
+
+<Appear>
+
+```java
+int number = 5;
+number++;
+System.out.println("My new value" + "is the " + "number " + number);
+```
+
+```raw
+My new valueis the number 6
+```
+
+</Appear>
