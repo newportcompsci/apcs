@@ -1,0 +1,97 @@
+import slideTheme from "../../components/slideTheme"
+export const theme = slideTheme
+
+# Mixing Types & Casting
+
+---
+
+### Zombies, Werewolves, and Humans
+
+
+> What do you think would happen if a zombie bit a werewolf?
+
+
+> So : Zombie > Werewolf > Human?
+
+
+Same thing happens when we mix together different types
+
+---
+
+### Strings, doubles, and integers
+
+
+> Think about our past examples:
+
+```java
+1 + 9.0 = 10.0
+1 + "hello" = "1hello"
+1 + 2.0 + "hello" = "3.0hello"
+```
+
+> So: String > double > int
+
+---
+
+- If you combine an int and a double with an operator (+ - * / % ) the result is a double
+
+- If you combine an int and a String with a `+` the result is a String 
+
+- If you combine an double and a String with a `+` the result is a String?
+
+---
+
+## Promoting
+
+> In Java we call this promoting!
+
+```java
+int intVal = 1;
+double doubleVal = 1.0;
+String strVal = "1";
+```
+
+---
+
+# Worksheet
+
+---
+
+## Introduction to Casting
+
+```java
+(int) 4.29 // -> 4
+(double) 1 // -> 1.0
+```
+
+### Note: 
+
+String is not a primitive type and cannot be cast. Java will convert int and double to strings when concatenated with a string.
+
+---
+
+## String Casting / Parsing
+
+```java
+"" + 4.892 // -> "4.982"
+```
+
+###  Note
+
+> There is a trick to turning a String into a primitive though... Using Wrapper Classes
+
+---
+
+## Wrapper Classes
+
+```java
+Integer.parseInt("4") // -> 4
+Double.parseDouble("4.982") // -> 4.982
+Integer.parseInt("4.982") // -> Runtime Exception!
+Double.parseDouble("4") // -> 4.0
+```
+
+---
+
+# Worksheet
+

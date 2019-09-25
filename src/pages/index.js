@@ -26,9 +26,10 @@ const IndexPage = ({
     <Heading level={1}>Course Calendar</Heading>
     <Calendar
       today={moment().startOf('day')}
-      dates={edges.map(({ node: { frontmatter: { start, end, ...rest } } }) => ({
+      dates={edges.map(({ node: { frontmatter: { start, end, title, ...rest } } }) => ({
         start: moment(start).startOf('day'),
         end: moment(end).add(1, 'day').startOf('day'),
+        title: title.split('-')[0],
         ...rest,
       }))}
     />
