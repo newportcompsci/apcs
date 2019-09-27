@@ -9,4 +9,39 @@ slides: true
 import Layout from "../../../components/mdxLayout"
 export default Layout
 
-More content to come :thumbsup:
+## Challenge 
+
+Write code that counts to 1000 in 11 lines. 
+**The Catch**...You cannot use a loop that executes more than 10 times.
+
+### Solution A
+
+```java 
+public class SolutionA {
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0, j < 10; j++) {
+                for (int k = 0; k < 10; k++) {
+                    System.out.println(100 * i + 10 * j + k + 1);
+                }
+            }
+        }
+    }
+}
+```
+
+### Solution B
+
+```java 
+public class SolutionB {
+    public static void main(String[] args) {
+        for (int i = 0, sum = 0; i < 10; i++) {
+            for (int j = 0, j < 10; j++) {
+                for (int k = 0; k < 10; k++) {
+                    System.out.println(++sum);
+                }
+            }
+        }
+    }
+}
+```
