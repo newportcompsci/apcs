@@ -9,4 +9,66 @@ slides: true
 import Layout from "../../../components/mdxLayout"
 export default Layout
 
-More content to come :thumbsup:
+## Identifying Scope Errors 
+
+### Problem 2a
+```java 
+public static void main(String[] args) {
+    for (int i = 0; i < 10; i++) {
+        int squared = i * i;
+        System.out.println(i + " squared is " + squared);
+    }
+
+    // Error! squared was declared in the for loop. 
+    System.out.println("The last one was " + squared);
+}
+```
+
+### Problem 2b
+```java 
+public static void interestingMethod() {
+    int x = 1;
+    int y = 2;
+    multiplyPlease();
+}
+
+public static void main(String[] args) {
+    // Error! Both x and y are declared inside of 
+    // the interesting method. 
+    System.out.println("x times y is " + (x * y));
+}
+```
+
+### Problem 2c
+```java 
+public static void main(String[] args) {
+    System.out.println("About to do the computation!");
+    doComputation();
+
+    // Error! x is declared in the do computation method. 
+    System.out.println("The result of the computation is " + x);
+}
+
+public static void doComputation() {
+    int x = 1;
+    for (int i = 0; i < 100; i++) {
+        x += 3;
+        x *= 2;
+    }
+}
+```
+
+### Problem 2d
+```java 
+public static void main(String[] args) {
+    int i = 0; 
+    System.out.println("Let's get started.");
+
+    // Error! i has already been declared. 
+    for (int i = 0; i < 10; i++) {
+        System.out.println("My favorite number is " + i);
+    }
+
+    System.out.println("I guess I have a lot of favorite numbers!");
+}
+```
