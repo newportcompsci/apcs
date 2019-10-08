@@ -1,0 +1,191 @@
+---
+path: /unit-2/lesson-10
+start: 2019-10-07
+end: 2019-10-08
+title: 'Lesson 2.10 - Review'
+slides: false
+attachments: 
+  - ./review.docx
+---
+
+import Layout from "../../../components/mdxLayout"
+export default Layout
+
+## Vocabulary
+
+
+
+## Problem 2
+
+```java
+boolean isValid;
+```
+
+## Problem 3
+
+```java
+PI = 3.14159;
+```
+
+## Problem 4
+
+```java
+count++;
+++count; // OR
+count += 1; // OR
+count = count + 1; // OR
+```
+
+## Problem 5 and 6
+
+```java
+1 + 2.0 + 3 + "4" + 5 = "6.045"
+
+(int)1.123 + 4 % 3 = 2
+```
+
+## Problem 7
+
+```java
+	public static void mystery1() {
+		int c = 11; // Start of C
+		
+		System.out.println("Mystery value 1 " + c); // End of C
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("Welcome!");
+		
+		int a = 10; // Start of A
+		
+		for (int i = 0; i < a; i++) {
+			int b = a + i; // Start of B
+			
+			System.out.println(b); // End of B
+		}
+		
+		mystery1(); // End of A
+	}
+```
+
+## Problem 8
+
+```java
+	public static void main(String[] args) {
+		int x = 10;
+		int y = 20;
+		double z = 30.4;
+		
+		y = x - 8;
+		z = (z + x) * y;
+		x = ((int)z + 1) % x;
+        
+        System.out.println("The value of x is " + x);
+	}
+```
+
+*Output*
+
+```raw
+The value of x is 2
+```
+
+## Problem 9
+
+```java
+	public static void main(String[] args) {
+		int i = 0;
+		for (i = 0; i < 3; i++) // No brackets!
+			System.out.println(i);
+			for (int j = 1; j <= 2; j++) {
+				System.out.println(j + i);
+			}
+	}
+```
+
+*Output*
+
+```raw
+0
+1
+2
+4
+5
+```
+
+## Problem 10
+
+```java
+public static void main(String[] args) {
+		int count = 0;
+		for (int i = 0; i < 3; i++); { // Remember the semi-colon!
+			for (int j = 0; j < 3; j++); {
+				count++;
+				System.out.println("The count is " + count);
+			}
+		}
+	}
+```
+
+*Output*
+
+```raw
+The count is 1
+```
+
+## Problem 11
+
+```java
+public static void main(String[] args) {
+		for (int line = 1; line <= 4; line++) {
+			int numDash = -line + 5;
+			int numStar = 2*line;
+			
+			for (int i = 0; i < numDash; i++) {
+				System.out.print("-");
+			}
+			
+			for (int i = 0; i < numStar; i++) {
+				System.out.print("*");
+			}
+
+			for (int i = 0; i < numDash; i++) {
+				System.out.print("-");
+			}
+			
+			System.out.println();
+		}
+
+		for (int line = 3; line > 0; line--) {
+			int numDash = -line + 5;
+			int numStar = 2*line;
+			
+			for (int i = 0; i < numDash; i++) {
+				System.out.print("-");
+			}
+			
+			for (int i = 0; i < numStar; i++) {
+				System.out.print("*");
+			}
+
+			for (int i = 0; i < numDash; i++) {
+				System.out.print("-");
+			}
+			
+			System.out.println();
+		}
+	}
+
+```
+
+*Output*
+
+```raw
+----**----
+---****---
+--******--
+-********-
+--******--
+---****---
+----**----
+```
