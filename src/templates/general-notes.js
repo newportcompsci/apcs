@@ -5,21 +5,24 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Heading from "../components/Heading"
 
-const SyllabusPage = ({ data }) => {
+const GeneralNotesTemplate = ({ data }) => {
   return (
     <Layout>
-      <Heading level={1}>Syllabus</Heading>
+      <Heading level={1}>{ data.mdx.frontmatter.title }</Heading>
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
     </Layout>
   )
 }
 
-export default SyllabusPage
+export default GeneralNotesTemplate 
 
 export const query = graphql`
-  {
-    mdx(frontmatter: { path: { eq: "/syllabus" } }) {
+  query NotesQuery($path: String) {
+    mdx(frontmatter: { path: { eq: $path } }) {
       body
+      frontmatter {
+          title
+      }
     }
   }
 `

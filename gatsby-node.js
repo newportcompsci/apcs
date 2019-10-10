@@ -4,9 +4,21 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const lessonTemplate = path.resolve(`src/templates/lesson-template.js`)
   const unitTemplate = path.resolve(`src/templates/unit-template.js`)
+  const generalTemplate = path.resolve(`src/templates/general-notes.js`)
 
   const result = await graphql(`
     {
+      notes: allMdx(
+        filter: { frontmatter: { path: { regex: "/^\/notes/" } }}
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
       units: allMdx(
         filter: { frontmatter: { path: { regex: "/unit-\\\\d+$/" } } }
       ) {
@@ -40,7 +52,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  let { units, lessons } = result.data
+  let { units, lessons, notes } = result.data
+
+  notes.edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.path,
+      component: generalTemplate, 
+      context: {}
+    })
+  })
 
   units.edges.forEach(({ node }) => {
     createPage({

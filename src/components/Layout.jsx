@@ -18,7 +18,7 @@ const LINKS = [
   },
   {
     name: "Syllabus",
-    url: "/syllabus",
+    url: "/notes/syllabus",
   },
 ]
 
