@@ -1,0 +1,93 @@
+import slideTheme from "../../components/slideTheme"
+export const theme = slideTheme
+
+# Parameters
+
+---
+
+
+## Old Program:
+
+```java
+writeSpaces();
+```
+
+```java
+public void writeSpaces() {
+    for( int i = 0; i < 10; i ++) { 
+        System.out.print(" ");
+    }
+}
+```
+
+---
+
+## Old Program:
+
+```java
+int number = 10;
+writeSpaces();
+```
+
+
+```java
+public void writeSpaces(){
+    for( int i = 0; i < number; i ++){
+        System.out.print(" ");
+    }
+}
+```
+
+---
+
+## New Program:
+
+```java
+public void writeSpaces ( int number){
+    for( int i = 0; i < number; i ++){
+        System.out.print (" ");
+    }
+}
+```
+
+---
+
+## Calling Parameters:
+
+**Correct**: 
+
+```java
+writeSpaces(10)
+writeSpaces(24901)
+writeSpaces(9/3 - 2)
+
+int x = 20; 
+writeSpaces(x);
+```
+
+---
+
+## Calling Parameters:
+
+**Incorrect**:
+
+```java
+writeSpaces();
+writeSpaces("ten");
+```
+
+---
+
+## Actual vs Formal Parameters
+
+### Actual Parameters (argument):
+
+```java
+writeSpaces (10)
+```
+
+### Formal Parameters (parameter):
+
+```java
+public void writeSpaces (int x){
+```
