@@ -1,0 +1,78 @@
+import slideTheme from "../../components/slideTheme"
+export const theme = slideTheme
+
+# Limitations of Parameters & Multiple Parameters
+
+---
+
+```java
+public class ParameterExample{
+
+    public static void main (String[] args) {
+        int x = 17;
+
+        doubleNumber(x);
+        System.out.println("x = " + x);
+        System.out.println();
+
+        int number = 42;
+
+        doubleNumber(number);
+
+        System.out.println("number = " + number);
+    }
+
+    public static void doubleNumber(int number) {
+        System.out.println("Initial value = " +  number);
+        number = number * 2;
+        System.out.println("Final value =  " + number);
+    }
+}
+```
+
+---
+
+## Using Multiple Parameters
+
+```raw
+public static <type> <name> (<type> <name>, <type> <name>, ... <type> <name>) {
+    <statement>;
+    <statement>;
+    ...
+    <statement>;
+}
+```
+
+```raw
+method name (expression, expression, expression);
+```
+
+---
+
+```java
+public class ParameterArt {
+    public static void main(String[] args){
+        writeChars('=', 20);
+        System.out.println();
+
+        for (int i = 1; i <= 10; i++){
+            writeChars('>', i);
+            writeChars(' ', 20 - 2 * i); 
+            writeChars('<', i);
+
+            System.out.println();
+        }
+    }
+
+    public static void writeChars(char ch, int number) {
+        for ( int i = 1; i <= number; i ++){ 
+         System.out.print(ch);
+        }
+    }
+}
+```
+
+---
+
+Worktime
+
