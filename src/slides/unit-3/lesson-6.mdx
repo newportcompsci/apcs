@@ -1,0 +1,58 @@
+import slideTheme from "../../components/slideTheme"
+export const theme = slideTheme
+
+# Interactive Programs & Scanner Objects
+
+---
+
+## The new stuff
+
+```java
+import java.util.*
+
+Scanner userInput = new Scanner(System.in);
+// Do stuff with scanner
+
+userInput.close(); // Only do this once in main!
+```
+
+---
+
+## Interactive programming
+
+```java
+int a, b, c;
+
+System.out.println("Quadratic Formula Solver");
+System.out.print("a = "); // Prompt
+a = userInput.nextInt();  // Get value
+
+System.out.print("b = ");
+b = userInput.nextInt();
+
+Sysetm.out.print("c = ");
+c = userInput.nextInt();
+
+quadraticFormula(a, b, c); // Asume this was defined...
+```
+
+---
+
+## next vs nextLine
+
+- next() can read the input only till the space. It can’t read two words separated by space. Also, next() places the cursor in the same line after reading the input.
+
+- nextLine() reads input including space between the words (that is, it reads till the end of line n). Once the input is read, nextLine() positions the cursor in the next line.
+
+---
+
+## Example 
+
+```java 
+System.out.print("Username: ");
+String username = userInput.nextLine();
+System.out.print("Password: ");
+String password = userInput.nextLine();
+
+boolean isValid = password.equals("password"); // Will this work?
+```

@@ -1,0 +1,42 @@
+import slideTheme from "../../components/slideTheme"
+export const theme = slideTheme
+
+# Return Values
+
+---
+
+## Parameters can be manipulated, but don't change.
+
+```java
+int x = 10
+change10to9(10); //THIS DOESN'T WORK!!
+
+public static void change10to9(int x) { 
+    x -= 1; 
+} //WHY?
+```
+
+---
+
+## So how do we get returned values?
+
+---
+
+## The new method header:
+
+```java
+public static double sum(double n){
+
+}
+```
+
+---
+
+## The new method header:
+
+```java
+public static double sum(double n){
+    return (n + 1) * n / 2;
+}
+```
+
