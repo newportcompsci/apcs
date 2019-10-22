@@ -1,0 +1,45 @@
+---
+path: /unit-3/lesson-7
+start: 2019-10-22
+end: 2019-10-22
+title: "Lesson 3.07 - One Day Programming Project"
+slides: false
+attachments: 
+  - ./commenting-guide.pdf
+  - ./style-guide.pdf
+---
+
+import Layout from "../../../components/mdxLayout"
+export default Layout
+
+# Project 
+
+Write a program that produces calendars as output. Your program should have a method that outputs a single 
+month's calendar like the one below, given parameters to specifiy how many days are in the month and what 
+date the first Sunday in the month is. In the month shown below, these values are 31 and 6, respectively. 
+Your program should also prompt a user for this input and then show the result. 
+
+```raw 
+  Sun    Mon    Tue    Wed    Thu    Fri    Sat 
++------+------+------+------+------+------+------+
+|      |      |   1  |   2  |   3  |   4  |   5  |
+|   6  |   7  |   8  |   9  |  10  |  11  |  12  |
+|  13  |  14  |  15  |  16  |  17  |  18  |  19  |
+|  20  |  21  |  22  |  23  |  24  |  25  |  26  |
+|  27  |  28  |  29  |  30  |  31  |      |      |
++------+------+------+------+------+------+------+
+```
+
+One tricky part of this program is making the various columns line up properly with proper widths. We 
+will learn better ways of formatting test later. For now you will have to use what we have learned so 
+far about type casting and loops to properly format the string.
+
+*Hint*: you should have **at least** two static methods each of which take two parameters. 
+
+| Category | Points | 
+|----------|--------|
+| Style | 5 |
+| Comments | 5 | 
+| Executes | 5 | 
+| Uses Parameters | 3 | 
+| User Input Experience | 2| 
