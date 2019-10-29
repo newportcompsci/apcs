@@ -1,0 +1,58 @@
+import slideTheme from "../../components/slideTheme"
+export const theme = slideTheme
+
+# Reducing Redundancy
+
+---
+
+## Classroom Competition
+
+Factor out redundant code from the following example by moving it 
+out of the if/else statement, preserving the same output.
+
+---
+
+## Challenge 1
+
+---
+
+```java
+if (x < 30) { 
+    a = 2; 
+    x++; 
+System.out.println("Spongebob Squarepants! " + x); 
+} else { 
+    a = 2; 
+    System.out.println("Spongebob Squarepants! " + x); 
+}
+```
+
+---
+
+## Challenge 2
+
+---
+
+```java
+int sum = 1000; 
+scanner console = new Scanner(System.in);
+
+// You can assume they will only enter 1 OR 2
+system.out.print("Is your money multiplied 1 or 2 times? ");
+int times = console.nextInt(); 
+
+if (times == 1) { 
+    System.out.print("And how much are you contributing? "); 
+    int donation = console.nextInt(); 
+    sum = sum + donation; 
+    count1++; 
+    total = total + donation; 
+} 
+if (times == 2) { 
+    system.out.print("And how much are you contributing? "); 
+    int donation = console.nextInt(); 
+    sum = sum + 2 * donation; 
+    count2++; 
+    total = total + donation; 
+}
+```
