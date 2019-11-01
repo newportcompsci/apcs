@@ -1,0 +1,69 @@
+import slideTheme from "../../components/slideTheme"
+export const theme = slideTheme
+
+# Random Numbers
+
+---
+
+## When do we use randomization?
+
+
+- Create an enemy that spawns after some random amount of time, but between 7 
+and 23 seconds.
+
+- Pick a random item from a list of 100 words the user needs to guess in Hangman
+
+- Create a new username between 6 and 10 characters picking randomly what each 
+character is, from lower/capital letters and numbers.
+
+- Make a ball bounce, but not precisely, by adding random angles to the bounce.
+
+---
+
+## Let's make some random numbers:
+
+> How do we make a random object?
+
+```java
+// Top of file 
+import java.util.Random;
+
+Random r = new Random();
+
+result = r.nextInt(6); //Gives a number between 0 and 5
+result = r.nextInt(6) + 1; //between 1 and 6.
+System.out.println("You rolled a " + result);
+```
+
+[Java Random Docs](https://docs.oracle.com/javase/8/docs/api/java/util/Random.html)
+
+---
+
+## Think-Pair-Share
+
+- Write an expression that simulates a roll of a 20-sided dice.
+- Write an expression that yields a random number between 0.0 and 1.0.
+
+---
+
+## Think-Pair-Share
+
+```java
+Random r = new Random();
+int diceRoll = r.nextInt(20) + 1;
+double randDouble = r.nextDouble() // or Math.random()
+```
+
+---
+
+## Lab
+
+Using everything we have learned so far in Unit 3 (loops, conditions, Scanner, Random) 
+try to put these pieces together to create some sort of game. 
+
+**Criteria**
+- Must have at least one while loop 
+- Must take user input through the scanner 
+- Must use a static method with parameters AND returns a value 
+- Must use Random numbers 
+- Must use conditions 
