@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/apcs',
+  pathPrefix: "/apcs",
   siteMetadata: {
     title: `AP Computer Science A`,
     description: ``,

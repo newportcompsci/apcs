@@ -1,0 +1,93 @@
+import slideTheme from "../../components/slideTheme"
+export const theme = slideTheme
+
+# While Loops
+
+---
+
+## Definite Loops
+
+Executes a known number of times.
+- Print "hello" 10 times.
+- Find all the prime numbers up to integer n.
+- Print each odd number between 5 and 127.
+
+---
+
+
+## Indefinite loops: 
+
+One where the number of times it's run is not known.
+- Prompts the user until they type a non-negative number.
+- Print random numbers until a prime number is printed.
+- Repeat until the user types 'q' to quit.
+
+---
+
+## The while loop:
+
+Repeatedly executes its body as long as the test is true.
+
+```java
+while (test) {
+    statements(s);
+}
+```
+
+---
+
+## Example:
+
+```java
+int num = 1;
+
+while (num <= 200) {
+    System.out.print(num + " ");
+    num = num * 2;
+}
+```
+
+---
+
+## Example 2 (while loop):
+
+```java
+int i = 0;
+
+while (i < 10) {
+    System.out.println(i);
+    i++; 
+}
+```
+
+---
+
+## Example 2 (while loop):
+
+```java
+for (int i = 0; i < 10; i ++) {
+    System.out.println(i);
+}
+```
+
+---
+
+# What's the difference?
+
+How many times does this loop execute? 
+What is the output?
+
+---
+
+## Try rewrite this loop as a for loop.
+
+```java
+int n = 91; 
+int factor = 2;
+
+while (n % factor != 0) {
+    factor++;
+}
+
+System.out.println("First factor is " + factor);
+```
