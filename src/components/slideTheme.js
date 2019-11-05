@@ -18,6 +18,17 @@ const Provider = props => {
         padding: "2em",
         textAlign: "left",
       },
+      table: {
+        borderCollapse: 'collapse'
+      },
+      td: {
+        border: '1px solid black',
+        padding: '0.5em 1em',
+      },
+      th: {
+        border: '1px solid black',
+        padding: '0.5em 1em',
+      },
     },
   }
 

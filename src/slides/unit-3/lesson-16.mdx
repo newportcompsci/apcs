@@ -1,0 +1,172 @@
+import slideTheme from "../../components/slideTheme"
+export const theme = slideTheme
+
+# Boolean Logic
+
+---
+
+### What are these things?
+
+```java
+for (int i = 0; i < 4; i++) { 
+    System.out.println(i) 
+}
+
+int j = 0;
+
+while (j * j < 20){
+    System.out.println(j); 
+    j = j * 2 + 1;
+}
+```
+
+---
+
+### boolean: the easiest type!
+
+Only two values:
+```java
+true
+false
+```
+
+---
+
+### Grammar
+
+```raw
+<expression> <relational operator> <expression>
+```
+
+```java
+int a = 1;
+a == 1; // Equality 
+a != 2; // Not Equals
+a >= -3 // Greater Than or Equal
+```
+
+---
+
+### Making Booleans!
+
+- Perform a test
+- Evaluates to a boolean value
+
+
+| Operator | Meaning | Example | Value |
+|----------|---------|---------|-------|
+| == | equals | `1 + 1 == 2` |  `true` |
+| != | does not equal | `3.2 != 2.5` |  `true` |
+| < | less than | `10 < 5` |  `false` |
+| > | greater than | `10 > 5` | `true` |
+| <= | less than or equal to | `126 <= 100` |  `false` |
+| >= | greater than or equal to | `5.0 >= 5.0` |  `true` |
+
+---
+
+### Boolean Logic
+
+
+Expanding on true and false: `!, &&, and ||`
+
+| Operator | Meaning | Example | Value |
+|----------|---------|---------|-------|
+| && | `AND` | (4 == 4) && (2 > 1) | `true` |
+| \|\| | `OR` | (1 < 2) \|\| (2 < 1) | `true` | 
+| ! | `NOT` | !(2 < 1) | `true` |
+
+---
+
+### Boolean Logic
+
+```java
+if(q == 1 || 2 || 4){
+    // This doesn't work
+    // you need to use full 
+    // boolean expression!
+    statement;
+    statement;
+}
+
+if(q == 1 || q == 2 || q == 4){
+    statement;
+    statement;
+}
+```
+
+---
+
+### Working with De Morgan's Laws
+
+| p | q | (p \|\| q) | !(p \|\| q) | !p | !q | !p && !q |
+|---|---|------------|-------------|----|----|----------|
+|  |  |           |            |   |   |         | 
+|  |  |           |            |   |   |         | 
+|  |  |           |            |   |   |         | 
+|  |  |           |            |   |   |         | 
+
+> What are all the possible combinations of values p and q can have?
+
+---
+
+### Working with De Morgan's Laws
+
+| p | q | (p \|\| q) | !(p \|\| q) | !p | !q | !p && !q |
+|---|---|------------|-------------|----|----|----------|
+| F | F |           |            |   |   |         | 
+| F | T |           |            |   |   |         | 
+| T | F |           |            |   |   |         | 
+| T | T |           |            |   |   |         | 
+
+> Now we evaluate p OR q. As long as one of them is true the value will result in true
+
+---
+
+### Working with De Morgan's Laws
+
+| p | q | (p \|\| q) | !(p \|\| q) | !p | !q | !p && !q |
+|---|---|------------|-------------|----|----|----------|
+| F | F |      F     |            |   |   |         | 
+| F | T |      T     |            |   |   |         | 
+| T | F |      T     |            |   |   |         | 
+| T | T |      T     |            |   |   |         | 
+
+> Now we "negate" the previous value. In otherwords, every T becomes an F and every F becomes a T
+
+---
+
+### Working with De Morgan's Laws
+
+| p | q | (p \|\| q) | !(p \|\| q) | !p | !q | !p && !q |
+|---|---|------------|-------------|----|----|----------|
+| F | F |      F     |      T      |   |   |         | 
+| F | T |      T     |      F      |   |   |         | 
+| T | F |      T     |      F      |   |   |         | 
+| T | T |      T     |      F      |   |   |         | 
+
+> Do the same thing with the raw values of p and q.
+
+---
+
+### Working with De Morgan's Laws
+
+| p | q | (p \|\| q) | !(p \|\| q) | !p | !q | !p && !q |
+|---|---|------------|-------------|----|----|----------|
+| F | F |      F     |      T      |  T |  T |         | 
+| F | T |      T     |      F      |  T |  F |         | 
+| T | F |      T     |      F      |  F |  T |         | 
+| T | T |      T     |      F      |  F |  F |         | 
+
+> Now we evaluate !p && !q. The result is true ONLY when they are both true
+
+---
+
+### Working with De Morgan's Laws
+
+| p | q | (p \|\| q) | !(p \|\| q) | !p | !q | !p && !q |
+|---|---|------------|-------------|----|----|----------|
+| F | F |      F     |      T      |  T |  T |    T     | 
+| F | T |      T     |      F      |  T |  F |    F     | 
+| T | F |      T     |      F      |  F |  T |    F     | 
+| T | T |      T     |      F      |  F |  F |    F     | 
+
