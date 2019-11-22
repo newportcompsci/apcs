@@ -27,13 +27,13 @@ Average temp = 44.6
 ```java
 public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
-    System.out.println ("How many days?"); 
+    System.out.print("How many days temperatures? "); 
     int days = scanner.nextInt();
     double sum = 0.0;
 
     for (int day = 0; day < days; day++) {
-        sum += 
-        scanner.nextDouble();
+        System.out.print("Day " + day + " high temp: ");
+        sum += scanner.nextDouble();
     }
 
     System.out.println("Average: " + sum/days);
