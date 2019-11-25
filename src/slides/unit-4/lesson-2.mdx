@@ -1,0 +1,77 @@
+import slideTheme from "../../components/slideTheme"
+export const theme = slideTheme
+
+# Each Loop & Arrays Class
+
+---
+
+## Traditional loop:
+
+```java
+int[] fallTemperatures = {55, 50, 59, 69, 48, 30, 48};
+
+for(int i = 0; i < fallTemperature.length; i++) { 
+if(fallTemperatures[i] > 32) { 
+above++;
+}
+}
+```
+
+---
+
+
+## For-each loop
+
+```java
+int[] fallTemperatures = {55, 50, 59, 69, 48, 30, 48};
+
+for(int i : fallTemperatures){
+if(i > 32){
+above++;
+}
+}
+```
+
+---
+
+## Easy access with a for-each loop:
+
+```raw
+for (<type> <name> : <array>) {
+<statement>;
+<statement>;
+}
+```
+
+---
+
+## What does the following code output?
+
+```java 
+public class MyMoney {
+    public static void doubleMyMoney(int[] m) {
+        for (int i = 0; i < m.length; i++) {
+            m[i] *= 2;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] money = {7, 3, 1100, 49};
+        doubleMyMoney(money);
+        for(int x : money) {
+            System.out.println(x);
+        }
+    }
+}
+```
+
+---
+
+## Answer 
+
+```raw
+14
+6
+2200
+98
+```
