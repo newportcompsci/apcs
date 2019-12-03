@@ -1,0 +1,108 @@
+import slideTheme from "../../components/slideTheme"
+export const theme = slideTheme
+
+# Shifting Values & Arrays of Objects
+
+---
+
+```java
+int[] metroCardRides = {5, 4, 3, 2, 1};
+```
+
+> How would you reorganize this array (within your code) so that the 5 
+> moves from the first element to the last element? 
+
+> *You cannot reinitialize the array.
+
+---
+
+## Store the first value in the array.
+
+```java
+int first = metroCardRides [0];
+```
+
+> How do we assign each value in the array to the next value in the array?
+
+
+> Hint: Try using a for loop to cycle through!
+
+---
+
+## Cycle through the array:
+
+```java
+for (int j = 0; j < metroCardRides.length - 1; j++){
+    metroCardRides [j] = metroCardRides [j + 0];
+}
+```
+
+> What additional code do we need to add to finish our array?
+
+| 0 | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| 4 | 3 | 2 | 1 | 1 |
+
+---
+
+
+```java
+public static void firstToLast(int[] metroCardRides) {
+    int first = metroCardRides[0]; 
+
+    for (int j = 0; j < metroCardRides.length - 1; j++) {
+        metroCardRides[j] = metroCardRides[j + 1];
+    }
+
+    metroCardRides[metroCardRides.length - 1] = first;
+}
+```
+
+> How can we do the opposite? Move the last element to the front?
+
+---
+
+```java
+public static void firstToLastRight(int[] metroCardRides){
+    int last = metroCardRides[metroCardRides.length - 1]; 
+    
+    for (int j = metroCardRides.length - 1; j >= 1; j++){
+    metroCardRides[j] = metroCardRides[j - 1];
+    }
+    
+    metroCardRides[0] = last;
+}
+```
+
+---
+
+## The Point Class
+
+```java 
+Point p = new Point(1, 2);
+```
+
+This class represents a coordinate pair (i.e., x and y values)
+
+Just like strings and arrays, `p` is a **reference** to the object 
+that represents the point (1, 2)
+
+---
+
+## Arrays of Objects
+
+```java
+Point[] points = {
+   new Point(3, 7),
+   new Point(4, 5),
+   new Point(8, 2),
+   new Point(7, 5),
+   new Point(2, 8)
+};
+```
+
+---
+
+## Memory representation
+
+![Array of points](https://firebasestorage.googleapis.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LCzJq3zDWL4iTLVHjtD%2F-LIgRnn0b86AcUmy3QjG%2F-LIgRt2g1lz-OHy2-M65%2Ffigure-405h.png?generation=1532975359099491&alt=media)
