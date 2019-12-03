@@ -33,7 +33,7 @@ int first = metroCardRides [0];
 
 ```java
 for (int j = 0; j < metroCardRides.length - 1; j++){
-    metroCardRides [j] = metroCardRides [j + 0];
+    metroCardRides [j] = metroCardRides [j + 1];
 }
 ```
 
@@ -66,8 +66,8 @@ public static void firstToLast(int[] metroCardRides) {
 public static void firstToLastRight(int[] metroCardRides){
     int last = metroCardRides[metroCardRides.length - 1]; 
     
-    for (int j = metroCardRides.length - 1; j >= 1; j++){
-    metroCardRides[j] = metroCardRides[j - 1];
+    for (int j = metroCardRides.length - 1; j >= 1; j--){
+        metroCardRides[j] = metroCardRides[j - 1];
     }
     
     metroCardRides[0] = last;
