@@ -1,0 +1,87 @@
+import slideTheme from "../../components/slideTheme"
+export const theme = slideTheme
+
+# Nested Loop Algorithms & Rectangular Arrays
+
+---
+
+# One-dimensional arrays:
+
+| 0 | 1 | 2 | 3 |
+|---|---|---|---|
+| turkey | ham | roast beef | turkey |
+
+---
+
+# Two-dimensional arrays:
+
+| | 0 | 1 | 2 | 3 |
+|-|---|---|---|---|
+|0| turkey | ham | roast beef | turkey |
+|1| ham | turkey | roast beef | chicken | 
+|2| roast beef | roast beef | turkey | roast beef |
+
+---
+
+## Write a loop that outputs all inversions:
+
+```java
+int[] data = { 4, 3, 2, 1 };
+```
+
+> E.g. (4, 3), (4, 2), (4, 1), (3, 2) ...
+
+---
+
+## Final code:
+
+```java
+for(int i = 0; i < data.length - 1; i++) { 
+    for(int j = i + 1; j < data.length; j++){
+        if (data [i] > data[j]) {
+            System.out.println("(" + data[i] + ", " + data[j] + ")");
+        }
+    }
+}
+```
+
+---
+
+## Array data representation:
+
+```java
+double          // A single value (0th dimension)
+double[]        // First Dimension, a line (sound)
+double[][]      // Second Dimension, a grid (images)
+double[][][]    // Thrid Dimension, a cube (video)
+```
+
+---
+
+## Constructing a double array:
+
+For each of pair of square brackets you are creating another "dimension"
+
+```raw
+<type> [][] arrayName = new <type>[rows][columns]
+```
+
+```java
+String[][] seatingChart = new String[4][8]
+```
+
+---
+
+## Passing double arrays as parameters:
+
+```java
+public static void print(double[][] grid) {
+    for(int i = 0; i < grid.length; i++) {
+        for(int j = 0; j < grid[i].length; j++) {
+            System.out.print(grid[i][j] + " ");
+        }
+        System.out.println();
+    }
+}
+
+```
