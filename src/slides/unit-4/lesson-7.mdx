@@ -1,0 +1,73 @@
+import slideTheme from "../../components/slideTheme"
+export const theme = slideTheme
+
+# ArrayList
+
+---
+
+
+## The ArrayList
+
+```java
+ArrayList<String>
+ArrayList<Point>
+
+
+ArrayList<String> spongebob = new ArrayList<String>();
+```
+
+---
+
+## The ArrayList
+
+```java
+spongebob.add("Patrick Star");
+spongebob.add("Squidward Tentacles");
+spongebob.add("Mr. Krabs");
+spongebob.add("Pikachu");
+spongebob.add("Sandy Cheeks");
+```
+
+---
+
+## Predict the output for:
+
+```java
+System.out.println("Some of the characters on Spongebob are" 
+    + spongebob);
+```
+
+---
+
+## The ArrayList
+
+```java
+spongebob.remove(3); //Pikachu is stored at index 3
+spongebob.add(3, "Plankton"); 
+```
+
+---
+
+## The ArrayList
+
+```java
+System.out.println(spongebob.get(3));
+System.out.println(spongebob.size()); 
+spongebob.set(3, "Plankton");
+spongebob.clear();
+```
+
+---
+
+## The ArrayList
+
+```java
+int sum = 0;
+
+for(int = 0; i < spongebob.size(); i++) { 
+    String s = spongebob.get(i);
+    sum += s.length();
+}
+
+System.out.println("Total of lengths = " + sum);
+```
